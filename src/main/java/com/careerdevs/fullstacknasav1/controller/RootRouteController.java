@@ -8,7 +8,7 @@ public class RootRouteController {
     
     @RequestMapping
     public String index() {
-        return "index";
+        return "Hello!";
     }
 
 }
