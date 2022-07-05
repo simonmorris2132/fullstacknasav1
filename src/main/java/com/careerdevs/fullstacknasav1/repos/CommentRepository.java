@@ -14,7 +14,7 @@ public interface CommentRepository extends JpaRepository<Comment, Long> {
     /*
     Select child nodes from a parent node
      */
-    @Query("SELECT NEW  com.comments.commentsystem.Custom.CustomCommentResult(c.id, c.name, c.content, c.parent_id)" +
+    @Query("SELECT NEW  com.careerdevs.fullstacknasav1.custom.CustomCommentResult(c.id, c.name, c.content, c.parent_id)" +
             "FROM Comment as c WHERE parent_id = :parent_id")
     public List<CustomCommentResult> findByParent(@Param("parent_id") Long parent_id);
 }
